@@ -21,10 +21,6 @@ _A sophisticated web application that analyzes Twitter sentiment to predict elec
 | ⚡ **Real-time Analysis**         | Dynamic loading and results presentation             |
 | 🏛️ **Professional Dashboard**     | Clean interface with Indian flag colors              |
 
-## 🎯 Quick Demo
-
-![Analysis Demo](https://via.placeholder.com/800x400/FF6B35/FFFFFF?text=Indian+Election+Predictor+Demo)
-
 ### 🔥 What Makes This Special?
 
 - 🎨 **Modern UI**: Glassmorphism design with smooth animations
