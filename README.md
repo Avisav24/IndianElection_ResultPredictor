@@ -291,7 +291,7 @@ Need help? We're here for you!
 
 <p align="center">
   <strong>Made with ❤️ in India</strong><br>
-  <em>© 2024 Indian Election Predictor | Powered by TextBlob NLP & Plotly</em>
+  <em>© 2025 Indian Election Predictor | Powered by TextBlob NLP & Plotly</em>
 </p>
 
 <p align="center">
