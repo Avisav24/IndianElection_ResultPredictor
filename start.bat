@@ -1,0 +1,9 @@
+@echo off
+echo Starting Indian Election Predictor...
+echo.
+echo Installing requirements...
+pip install -r requirements.txt
+echo.
+echo Starting Flask application...
+python app.py
+pause

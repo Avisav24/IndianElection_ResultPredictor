@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/flag.png') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/flag.png') }}"
+      type="image/png"
+    />
+    <title>Indian Election Predictor</title>
+
+    <!-- External CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+
+    <div class="container">
+      <div class="header">
+        <div class="header-content">
+          <div class="indian-flag"></div>
+          <h1 class="animate__animated animate__fadeInDown">
+            Indian Election Predictor
+          </h1>
+          <p class="animate__animated animate__fadeInUp">
+            Analyzing Twitter sentiment to predict election outcomes using
+            AI-powered NLP
+          </p>
+
+          <div class="politicians-preview">
+            <div
+              class="politician-card modi animate__animated animate__fadeInLeft"
+            >
+              <img
+                src="{{ url_for('static', filename='images/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi.jpg') }}"
+                alt="Narendra Modi"
+                class="politician-image"
+                onerror="this.src='https://via.placeholder.com/100x100/FF9933/FFFFFF?text=NM'; this.alt='Narendra Modi'"
+              />
+              <div class="politician-name">Narendra Modi</div>
+              <div class="politician-party">BJP</div>
+            </div>
+            <div
+              class="politician-card rahul animate__animated animate__fadeInRight"
+            >
+              <img
+                src="{{ url_for('static', filename='images/Rahul_Gandhi.png') }}"
+                alt="Rahul Gandhi"
+                class="politician-image"
+                onerror="this.src='https://via.placeholder.com/100x100/0066CC/FFFFFF?text=RG'; this.alt='Rahul Gandhi'"
+              />
+              <div class="politician-name">Rahul Gandhi</div>
+              <div class="politician-party">Congress</div>
+            </div>
+          </div>
+
+          <button
+            class="analyze-btn animate__animated animate__pulse animate__infinite"
+            onclick="startAnalysis()"
+          >
+            <i class="fas fa-chart-line"></i> Analyze Sentiment
+          </button>
+        </div>
+      </div>
+
+      <div class="loading">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">
+          <i class="fas fa-brain"></i> Analyzing sentiment patterns...
+        </div>
+      </div>
+
+      <div class="results">
+        <div class="stats-grid">
+          <div class="stat-card positive-stat">
+            <div class="stat-icon positive">
+              <i class="fas fa-thumbs-up"></i>
+            </div>
+            <h3>Narendra Modi - Positive</h3>
+            <p id="modi-positive">-</p>
+          </div>
+          <div class="stat-card negative-stat">
+            <div class="stat-icon negative">
+              <i class="fas fa-thumbs-down"></i>
+            </div>
+            <h3>Narendra Modi - Negative</h3>
+            <p id="modi-negative">-</p>
+          </div>
+          <div class="stat-card positive-stat">
+            <div class="stat-icon positive">
+              <i class="fas fa-thumbs-up"></i>
+            </div>
+            <h3>Rahul Gandhi - Positive</h3>
+            <p id="rahul-positive">-</p>
+          </div>
+          <div class="stat-card negative-stat">
+            <div class="stat-icon negative">
+              <i class="fas fa-thumbs-down"></i>
+            </div>
+            <h3>Rahul Gandhi - Negative</h3>
+            <p id="rahul-negative">-</p>
+          </div>
+        </div>
+
+        <div class="prediction-result">
+          <h2><i class="fas fa-trophy"></i> Prediction Result</h2>
+          <div class="winner-name" id="winner">-</div>
+          <div class="confidence-level" id="confidence">-</div>
+          <div id="sentiment-lead">-</div>
+        </div>
+
+        <div class="chart-container">
+          <div class="chart-title">📊 Sentiment Comparison</div>
+          <div id="bar-chart"></div>
+        </div>
+
+        <div class="pie-charts">
+          <div class="chart-container">
+            <div class="chart-title">
+              🔵 Narendra Modi Sentiment Distribution
+            </div>
+            <div id="modi-pie"></div>
+          </div>
+          <div class="chart-container">
+            <div class="chart-title">
+              🟠 Rahul Gandhi Sentiment Distribution
+            </div>
+            <div id="rahul-pie"></div>
+          </div>
+        </div>
+
+        <div class="disclaimer">
+          <h4><i class="fas fa-exclamation-triangle"></i> Disclaimer</h4>
+          <p>
+            This prediction is based solely on Twitter sentiment analysis and
+            should not be considered as a definitive election forecast. Actual
+            election results depend on many factors beyond social media
+            sentiment including voter turnout, regional preferences, and
+            ground-level campaign effectiveness.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          <i class="fas fa-code"></i> © 2024 Indian Election Predictor | Powered
+          by TextBlob NLP & Plotly
+        </p>
+      </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
