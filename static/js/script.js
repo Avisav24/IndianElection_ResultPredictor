@@ -1,4 +1,3 @@
-// Create animated background particles
 function createParticles() {
   const bgAnimation = document.querySelector(".bg-animation");
   for (let i = 0; i < 50; i++) {
