@@ -26,7 +26,6 @@ def find_polarity(review):
         return 0.0
 
 def perform_sentiment_analysis():
-    """Perform the complete sentiment analysis"""
     global analysis_results, analysis_cache
     
     # Check if results are already cached
