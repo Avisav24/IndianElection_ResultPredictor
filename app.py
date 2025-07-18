@@ -82,7 +82,7 @@ def perform_sentiment_analysis():
         if len(rahul) > 2000:
             rahul = rahul.sample(n=2000, random_state=10)
         
-        # Calculate sentiment percentages
+       
         modi_count = modi.groupby('Label').size()
         rahul_count = rahul.groupby('Label').size()
         
