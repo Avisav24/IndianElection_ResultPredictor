@@ -1,3 +1,4 @@
+@echo
 @echo off
 echo Starting Indian Election Predictor...
 echo.
