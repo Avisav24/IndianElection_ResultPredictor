@@ -1,6 +1,6 @@
 # 🇮🇳 Indian Election Predictor
 
-> **AI-Powered Sentiment Analysis for Election Predictions**
+**AI-Powered Sentiment Analysis for Election Predictions**
 
 [![Python Version](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Flask Version](https://img.shields.io/badge/Flask-2.0+-green.svg)](https://flask.palletsprojects.com)
