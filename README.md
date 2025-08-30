@@ -281,7 +281,7 @@ Need help? We're here for you!
 
 ## 🎉 Acknowledgments
 
-- 🙏 Thanks to all contributors
+- 🙏 Thanks to all
 - 📚 TextBlob for NLP capabilities
 - 📊 Plotly for beautiful visualizations
 - 🌐 Flask for the web framework
